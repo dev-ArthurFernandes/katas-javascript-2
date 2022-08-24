@@ -61,22 +61,40 @@ function factorial(n){
 console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
 // console.log(factorial(5))
 
-/**
- * BONUS (aviso: o grau de dificuldade é bem maior !!!)
- */
+/*
+     * BONUS (aviso: o grau de dificuldade é bem maior !!!)
+*/
 
 // crie a função fibonacci
 function fibonacci(n){
-    let fibonacci = [];
-    fibonacci[0] = 1;
-    fibonacci[1] = 1;
-    for (let i = 2; i < n;){
-    fibonacci[i] = add(fibonacci[i - 2], fibonacci[i - 1])
-    i = add(i, 1)
+    
+    let penultimo = "0"
+    
+    let ultimo = "1"
+    
+    let numero
+    
+    if(n <= 2){
+        if(n == 1){
+            numero = ""
+        }else{
+            numero = "1"
+        }
+    }else{
+
+        let contador = 3
+
+        while(contador <= n){
+            numero = add(ultimo, penultimo)
+            penultimo = ultimo
+            ultimo = numero
+            contador = add(contador, 1)
+        }
+        
     }
-    return fibonacci[n-1]
+    return numero.length
 }
 
 // descomente a linha seguinte para testar sua função
 console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
-console.log(fibonacci(7))
+console.log(fibonacci(6))
