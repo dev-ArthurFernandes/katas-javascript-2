@@ -44,13 +44,13 @@ console.assert(power(2, 8) === 256, 'A função power não está funcionando com
 // comece a criar a sua função factorial na linha abaixo
 function factorial(n){
     
-    let factor = 1
+    let factor = n
 
-    let num = n
+    let num = 1
 
-    for(let i = 1; i <= n-1; ){
+    for(let i = 1; i < n;){
         factor = multiply(factor, num)
-        num = n-i
+        num = add(num,1)
         i = add(i, 1)
     }
 
@@ -97,4 +97,4 @@ function fibonacci(n){
 
 // descomente a linha seguinte para testar sua função
 console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
-console.log(fibonacci(6))
+// console.log(fibonacci(6))
