@@ -97,4 +97,4 @@ function fibonacci(n){
 
 // descomente a linha seguinte para testar sua função
 console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
-// console.log(fibonacci(6))
+console.log(fibonacci(10))
